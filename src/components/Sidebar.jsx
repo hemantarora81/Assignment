@@ -84,6 +84,7 @@ const Sidebar = () => {
         sx={{
           width: drawerWidth,
           flexShrink: 0,
+          display: { xs: 'none', sm: 'none', md: 'block' }, // Hide on mobile and tablet screens
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',

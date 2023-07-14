@@ -20,38 +20,33 @@ const Home = () => {
     color: theme.palette.text.secondary,
   }));
   return (
-      <Grid container spacing={1} sx={{pt:18,pl:5,pr:1,backgroundColor:'#72b7f7',boxShadow:'none'}} alignItems='center'>
-          <Grid item xs={3} >
-    <Item><AreaChart/></Item>
-      </Grid>
-      <Grid item xs={3} >
-    <Item><DonutChart2/></Item>
-  </Grid>
-  <Grid item xs={3} >
-    <Item><Chart3/></Item>
-      </Grid>
-      <Grid item xs={3} >
-  <Item><LastChart/></Item>
+    <Grid container spacing={1} sx={{ pt: 18, pl: 5, pr: 1, backgroundColor: '#72b7f7', boxShadow: 'none' }} alignItems='center'>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
+      <Item><AreaChart /></Item>
+    </Grid>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
+      <Item><DonutChart2 /></Item>
+    </Grid>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
+      <Item><Chart3 /></Item>
+    </Grid>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
+      <Item><LastChart /></Item>
+    </Grid>
+    <Grid item xs={12} sm={6} md={8}>
+      <Item><LineChart /></Item>
+    </Grid>
+    <Grid item xs={12} sm={6} md={4}>
+      <Item><DonutChart /></Item>
+    </Grid>
+    <Grid item xs={12} sm={6} md={8}>
+      <Item><LineChart2 /></Item>
+    </Grid>
+    <Grid item xs={12} sm={6} md={4}>
+      <Item><PieChart /></Item>
+    </Grid>
   </Grid>
   
-  <Grid item xs={3}>
-        <Item>
-          <DonutChart />
-        </Item>
-  </Grid>
-  <Grid item xs={9} >
-    <Item><LineChart/></Item>
-      </Grid>
-      <Grid item xs={3}>
-        <Item>
-          <PieChart/>
-        </Item>
-  </Grid>
-  <Grid item xs={9} >
-    <Item><LineChart2/></Item>
-      </Grid>
-
-    </Grid>
   )
 }
 
