@@ -20,7 +20,7 @@ const Home = () => {
     color: theme.palette.text.secondary,
   }));
   return (
-    <Grid container spacing={1} sx={{ pt: 18, pr: 1,pl:{xs:1,md:5,sm:5}, backgroundColor: '#72b7f7', boxShadow: 'none' }} alignItems='center'>
+    <Grid container spacing={1} sx={{ pt: 18, pr: 1,pl:{xs:1,md:5,sm:1}, backgroundColor: '#72b7f7', boxShadow: 'none' }} alignItems='center'>
     <Grid item xs={12} sm={6} md={4} lg={3}>
       <Item><AreaChart /></Item>
     </Grid>
