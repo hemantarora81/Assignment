@@ -21,12 +21,14 @@ import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const toolbarStyle = {
-    backgroundImage: 'linear-gradient(to right top, #6878ff, #5d71fb, #506af7, #4263f3, #305cef, #2a55e4, #244fd9, #1e48ce, #2540ba, #2739a7, #283294, #272b82)',
-    color: 'white',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start'
-  };
+  backgroundImage: 'linear-gradient(to right top, #6878ff, #5d71fb, #506af7, #4263f3, #305cef, #2a55e4, #244fd9, #1e48ce, #2540ba, #2739a7, #283294, #272b82)',
+  color: 'white',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+};
+
+  
   
 const Sidebar = () => {
     const details = [
@@ -66,20 +68,23 @@ const Sidebar = () => {
   return (
     <Box sx={{ display: 'flex', overflow:'auto' }}>
       <CssBaseline />
+      
       <AppBar
-        position="fixed"
-        sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
-      >
-        <Toolbar style={toolbarStyle}>
-          <Typography variant="h6" sx={{ my: '10px', fontWeight: 'bold' ,fontSize:'38px'}} >
-            Hello,Hemant Arora
-                  </Typography>
-                  <Divider />
-                  <Typography variant='subtitle2' sx={{ mb: '20px',fontWeight:300 }}>
-                      Following is Your Organization's Perfomance Summary
-                  </Typography>
-        </Toolbar>
-      </AppBar>
+      position="fixed"
+      sx={{
+        width: '100%',
+      }}
+    >
+      <Toolbar style={{ ...toolbarStyle }} sx={{ml:{md:'240px'}}}>
+        <Typography variant="h6" sx={{ my: '10px', fontWeight: 'bold', fontSize: { xs: '24px', sm: '24px', md: '38px' } }}>
+          Hello, Hemant Arora
+        </Typography>
+        <Divider />
+        <Typography variant="subtitle2" sx={{ mb: '20px', fontWeight: 300, fontSize: { xs: '12px', sm: '14px', md: '16px' } }}>
+          Following is Your Organization's Performance Summary
+        </Typography>
+      </Toolbar>
+    </AppBar>
       <Drawer
         sx={{
           width: drawerWidth,
